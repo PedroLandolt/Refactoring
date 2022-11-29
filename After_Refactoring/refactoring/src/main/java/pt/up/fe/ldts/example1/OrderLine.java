@@ -9,11 +9,11 @@ public class OrderLine {
         this.quantity = quantity;
     }
 
-    public Product getProduct() {
-        return product;
+    public double getTotalPrice() {
+        return quantity * product.getPrice();
     }
 
-    public int getQuantity() {
-        return quantity;
+    public String typicalOfOrderLine(){
+        return product.getName() + "(x" + quantity + "): " + getTotalPrice();
     }
 }
